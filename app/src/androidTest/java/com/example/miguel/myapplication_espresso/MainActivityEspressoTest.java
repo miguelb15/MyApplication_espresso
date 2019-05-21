@@ -1,6 +1,5 @@
 package com.example.miguel.myapplication_espresso;
 
-import static org.junit.Assert.*;
 import androidx.test.rule.ActivityTestRule;
 import org.junit.Rule;
 import org.junit.Test;
@@ -21,8 +20,7 @@ public class MainActivityEspressoTest {
     @Test
     public void ensureTextChangesWork() {
         // Type text and then press the button.
-        onView(withId(R.id.inputField))
-                .perform(typeText("HELLO"), closeSoftKeyboard());
+        onView(withId(R.id.inputField)).perform(typeText("HELLO"), closeSoftKeyboard());
         onView(withText("Change Text")).perform(click());
         // Check that the text was changed.
         onView(withId(R.id.inputField)).check(matches(withText("Lalala")));

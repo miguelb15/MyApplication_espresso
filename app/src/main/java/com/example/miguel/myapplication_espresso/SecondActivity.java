@@ -1,10 +1,12 @@
 package com.example.miguel.myapplication_espresso;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class SecondActivity extends AppCompatActivity{
+import androidx.appcompat.app.AppCompatActivity;
+
+public class SecondActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,4 +16,5 @@ public class SecondActivity extends AppCompatActivity{
         String input = inputData.getString("input");
         viewById.setText(input);
     }
+
 }
