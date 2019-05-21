@@ -30,8 +30,7 @@ public class MainActivityEspressoTest {
     @Test
     public void ensureLaunchSecondActivityWithInputTextWork() {
         // Type text and then press the button.
-        onView(withId(R.id.inputField)).perform(typeText("NewText"),
-                closeSoftKeyboard());
+        onView(withId(R.id.inputField)).perform(typeText("NewText"), closeSoftKeyboard());
         onView(withText("Switch Activity")).perform(click());
         // This view is in a different Activity, no need to tell Espresso.
         onView(withId(R.id.resultView)).check(matches(withText("NewText")));

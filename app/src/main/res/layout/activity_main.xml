@@ -9,12 +9,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
-        android:id="@+id/changeText"
+        android:id="@+id/switchActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button" android:onClick="onClick"/>
+        android:text="Switch Activity" android:onClick="onClick"/>
     <Button
-        android:id="@+id/switchActivity"
+        android:id="@+id/changeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Change Text" android:onClick="onClick"/>

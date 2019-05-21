@@ -18,13 +18,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        EditText editText = findViewById(R.id.inputField);
         switch (view.getId()) {
             case R.id.changeText:
-                EditText editText = findViewById(R.id.inputField);
                 editText.setText("Lalala");
                 break;
             case R.id.switchActivity:
                 Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtra("input", editText.getText().toString());
                 startActivity(intent);
                 break;
         }
